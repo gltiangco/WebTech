@@ -5,13 +5,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Web Technologies - Gabbi Tiangco </title>
-    <h3><b>This is a map of Middlesex.</b></h3>
-    <p>
+    <style>
+    ul{
+       list-style: square;
+       list-style-image: url(images/smiley.gif);
+    }
+    body{
+    margin: 0 100px 0 100px;
+    background-image: url(images/music.gif);
+    }
+    
+    img.displayed{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+    }
+    h3{
+        position: relative;
+        color: white;
+        top: 40pt;
+        text-align: center;
+        z-index: 100;
+    }
+    </style>
+    <h1><b>This is a map of Middlesex.</b></h1>
         <a href="index.htm"> back to index</a>
-    </p>
+    
 </head>
 
 <body>
+<p>    
 <map name="Middlesex">     
 <area shape="rect" coords="301, 351, 330, 383" href="https://wellesleyma.gov/" 
 alt="Wellesley" title="Wellesley" target="_blank" />
@@ -19,6 +43,32 @@ alt="Wellesley" title="Wellesley" target="_blank" />
 alt="Newton" title="Newton" target="_blank" />
 </map>  
 <img src="images/Middlesex.gif" usemap="#Middlesex" alt="Map of Middlesex"  title="Clickable Map"/>
+</p>
+
+<p>
+<h2>My Courses</h2>
+<ul>
+    <li>Web Tech</li>
+    <li>Drugs and Intoxicants</li>
+    <li>ASM</li> 
+    <li>Sustainability</li> 
+</p>
+</ul>
+
+
+<p>
+<h2>2018 FIFA World Cup Ranking</h2>
+    <ol type="A">
+    <li><a href="https://boston.consulfrance.org/-English-" 
+        target="_blank"> <img src="images/Belgium.png" img height="30">Belgium</li></a>
+    <li><img src="images/Croatia.png" height="30">Croatia</li>
+    <li><img src="images/England.png" height="30">England</li>
+    <li><img src="images/France.png"  height="30">France</li>
+</ol>
+</p>
+<h3>Go Beavers!</h3>
+<img class="displayed" img src="images/beaver.jpg" title="Beaver">
+
 </body>
 
 </html>
