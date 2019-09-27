@@ -1,0 +1,68 @@
+table{
+    border: 2px cornflowerblue solid;
+    width: 500px;
+    /*the following lines will make the table centered*/
+    background-color: peachpuff;
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:auto;
+    border-spacing: 0;
+    box-shadow: 10px 10px 5px grey;
+}
+th{
+    font-size: 15px;
+    font-weight:bold;
+}
+tr,td{
+    border: 1px solid black;
+    padding:3px;
+    vertical-align:top;
+}
+#baby2{
+    text-align: right;
+
+}
+#babyelephant{
+    width: 70%;
+    background-color: lightcoral;
+}
+#easy{
+    width: 30%;
+    background-color: lightblue;
+}
+#hard{
+    width:35%;
+    background-color: lightgoldenrodyellow;
+}
+tr:hover{
+    background-color: bisque;
+}
+img{
+width: 100%;
+
+}
+p.scroll{
+    background-color: lime; 
+    width: 250px;
+    height:100px;
+    overflow: scroll;
+    margin: 50px auto 0 auto;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: blanchedalmond;
+}
+li a {
+    display: block;
+    color: lightskyblue;
+    padding: 8px 16px;
+    text-decoration: azure;
+}
+li a:hover{
+    background-color: lightsteelblue;
+    color: blanchedalmond;
+}
