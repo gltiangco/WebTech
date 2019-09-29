@@ -12,9 +12,15 @@ ul{
 }
 
 img{
-    height: 55px;
+    height:55px;
 }
-
+}
+#line{
+height:60px;
+}
+#logo{
+    height:40px;
+}
 li {
     float: left;
     }
