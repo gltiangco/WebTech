@@ -7,19 +7,25 @@
 <title>Document</title>
 <style>
 table{
-    color: navy;
-    width: 70%
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: silver;
-    font-family: Arial, Helvetica, sans-serif;
+color: navy;
+background-color: silver;
+font-family: Arial, Helvetica, sans-serif;
+margin-top: 10px;
+margin-bottom: 10px;
+margin: auto;
+width:70%;
+text-align: center;
+border: 3px black solid;
 }
-content{border: 2px thick solid black;}
-caption{ font-size: xx-large; color: navy;}
-#Ming{font-style: italic, bold; align-content: center; background-color: white;}
+tr,th,td{border: 2px solid black; padding:2px;vertical-align:middle;}
+img{margin-right: auto;
+margin-left:auto;
+display: block;
+width:400px;;}
+caption{font-size: xx-large; color: navy;}
+#Ming{font-style: italic; align-content: center; background-color: white;}
 #goldplating{background-color: lime;}
 #yellow{background-color: yellow;}
-img{position: center;}
 </style>
 </head>
 <body>
@@ -28,10 +34,10 @@ img{position: center;}
 <tr><th id="Ming" colspan="4">This is an exclusive vase from the Ming Dynasty.
 <br>It is available in two sizes, with and without gold plating.</th></tr>
 <tr>
-<td id="yellow">Picture</td>
-<td id="yellow">Size</td>
-<td id="yellow">Plating</td>
-<td id="yellow">Price</td>
+<th id="yellow">Picture</th>
+<th id="yellow">Size</th>
+<th id="yellow">Plating</th>
+<th id="yellow">Price</th>
 </tr>
 <tr>
 <td rowspan="4"><img src="ming.jpg"></td>
@@ -53,5 +59,6 @@ img{position: center;}
 <td id="goldplating">$565</td>
 </tr>
 </table>
+I, Gabbi Tiangco, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work.
 </body>
 </html>
