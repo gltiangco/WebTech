@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 2</title>
+
 <style>
 body{background-color:black; 
 background-image: url(beaver.jpg);
@@ -17,31 +19,60 @@ background-color: silver;
 font-family: 'Times New Roman', Times, serif;
 margin: auto;
 width:auto;
-text-align: center;
 border: 3px black solid;
 }
-tr,th,td{width: 80x; border: 2px solid black; padding:2px; vertical-align:center;}
-img{size:3rem 3px;width:80%; padding-right:20px; padding-left: 20px;margin-right: auto;margin-left: auto;}
-caption{font-size: 3em; color: white; padding: 30px;}
-#tell{background-color: white;}
-textarea{background-color: yellow;}
-#red{background-color: red;}
-#soapfeatures{width: 250px;}
-tr#form,td#form{text-align: left;}
-footer {position: fixed; left: 0; bottom: 0; width: 100%;}
+tr,th,td{
+border: 2px solid black; 
+vertical-align:center;
+}
+img{
+size:3rem 3px;
+width:80%; 
+padding-right:20px; 
+padding-left: 20px;
+margin-right: auto;
+margin-left: auto;
+}
+caption{
+font-size: 3em; 
+color: white; 
+padding: 30px;
+}
+#tell{
+background-color: white;
+text-align: center;
+}
+textarea{
+background-color: yellow;
+}
+#red{
+background-color: red;
+text-align: center;
+}
 
+#soap{
+width: 250px;
+text-align: center
+}
+#header{
+text-align: center;
+}
+#button{
+text-align: center;
+}
 </style>
 </head>
 <body>
 <table>
 <caption>Soap Survey</caption>
 <form>
- <tr id="First row">
-<td>Soap Image</td>
-<td>Soap Color <br>Preference</td>
-<td>Soap Purchase <br>Intent </td>
-<td id="soapfeatures">Soap Features Liked</td>
+<tr>
+<td id ="header">Soap Image</td>
+<td id ="header">Soap Color <br>Preference</td>
+<td id ="header">Soap Purchase <br>Intent </td>
+<td id="soap">Soap Features Liked</td>
 </tr>
+
 
 <tr id="form">
 <td><img src="soap-2.jpg"></td>
@@ -96,7 +127,7 @@ At $8.00/unit
 </td>
 </tr>
 <tr>
-<td colspan="4" id="tell">Tell us about yourself....</td>
+<td colspan="4" id="tell">Tell us about yourself...</td>
 </tr>
 
 <tr>
@@ -110,17 +141,25 @@ Gender:
 <td colspan="3">
 Age:(under 25 enter 1,25-40 enter, else enter 3)
 <textarea class="comment" maxlength="3"
-color="yellow" rows="2" cols="5"></textarea>
+color="yellow" rows="1" cols="5"></textarea>
 </td>
 </tr>
 
-<tr><td colspan="2">Your comments are welcome:
-<br><textarea class="comment" color="yellow" rows="8" cols="60"></textarea></td>
-<td colspan="2"><button> Done </button>
-<button id="red"> Oops </button></td></tr>
+<tr>
+<td colspan="2">Your comments are welcome:
+<br><textarea class="comment" color="yellow" rows="8" cols="60">
+</textarea>
+</td>
+
+<td colspan="2">
+<div id="button">
+<button> Done </button>
+<button id="red"> Oops </button>
+</div>
+</td>
+</tr>
 </table>
 </form>
-<footer></footer>
-
+I, Gabbi Tiangco, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work.
 </body>
 </html>
