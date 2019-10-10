@@ -1,84 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <style>
 body{background-color:black;}
 table{
 color: black;
 background-color: silver;
-font-family: 'Times New Roman', Times, serif
-margin-top: 10px;
-margin-bottom: 10px;
+font-family: 'Times New Roman', Times, serif;
+margin: auto;
 width:auto;
 text-align: center;
 border: 3px black solid;
 }
-tr,th,td{border: 2px solid black; padding:2px;vertical-align:middle;}
-img{margin: auto; display: block; float: left;}
-caption{font-size: 3em; color:white; padding: 30px;}
+tr,th,td{width: 80x; border: 2px solid black; padding:2px; vertical-align:center;}
+img{size:3rem 3px;width:80%; padding-right:20px; padding-left: 20px;margin-right: auto;margin-left: auto;}
+caption{font-size: 3em; color: white; padding: 30px;}
+#tell{background-color: white;}
+textarea{background-color: yellow;}
+#red{background-color: red;}
+#soapfeatures{width: 250px;}
+tr#form,td#form{text-align: left;}
+footer {position: fixed; left: 0; bottom: 0; width: 100%;}
+
 </style>
 </head>
 <body>
 <table>
-<form>
 <caption>Soap Survey</caption>
-<tr>
+<form>
+ <tr id="First row">
 <td>Soap Image</td>
-<td>Soap Color<br>Preference</td>
-<td>Soap Purchase<br>Intent</td>
-<td>Soap Features Liked</td>
+<td>Soap Color <br>Preference</td>
+<td>Soap Purchase <br>Intent </td>
+<td id="soapfeatures">Soap Features Liked</td>
 </tr>
-<tr>
-<td> <img src="soap-1.jpg"></td>
-<td><br><input type="button" name="product"> Green
-<br><input type="button" name="product"> Gold (shown)
-<br> <input type="button" name="product"> Red</td>
-</tr>
-<tr>
-<select name="Units"> At $5.00/unit
-<option value ="A">Definitely Buy</option>
-<option value ="A-">Likely Buy-</option>
-<option value ="B+">Undecided</option>
-<option value ="B">Unlikely Buy</option>
-<option value ="B-">Not Buy</option>
-</select>
-</tr>
-<tr>
-<br> <input type="checkbox" name="product"> Shape
-<br> <input type="checkbox" name="product"> Size
-<br><input type="checkbox" name="product"> Smell
-<br><input type="checkbox" name="product"> Texture
-</tr>
-<tr>
-<td><img src="soap-2.jpg"> </td>
-<td><br><input type="button" name="product"> Ivory
-<br><input type="button" name="product"> Sandal Wood (shown)
-<br> <input type="button" name="product"> Pink</td>
-</tr>
-<tr>
-<select name="Units"> At $8.00/unit
-<option value ="A">Definitely Buy</option>
-<option value ="A-">Likely Buy-</option>
-<option value ="B+">Undecided</option>
-<option value ="B">Unlikely Buy</option>
-<option value ="B-">Not Buy</option>
-</select>
-</tr>
-<tr>
-<br> <input type="checkbox" name="product"> Shape
-<br> <input type="checkbox" name="product"> Size
-<br><input type="checkbox" name="product"> Smell
-<br><input type="checkbox" name="product"> Texture
-</tr>
-</form>
-</table>
-<footer>
 
-</footer>
-I, Gabbi Tiangco, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work.
+<tr id="form">
+<td><img src="soap-2.jpg"></td>
+<td>
+<ul><input type="radio" name="product">Green</ul>
+<ul><input type="radio" name="product">Gold(shown)</ul>
+<ul><input type="radio" name="product">Red</ul>
+</td>
+<td>
+At $5.00/unit
+<select name="Units">
+<option value ="5">Definitely Buy</option>
+<option value ="4">Likely Buy</option>
+<option value ="3">Undecided</option>
+<option value ="2">Unlikely Buy</option>
+<option value ="1">Not Buy</option>
+</select>
+</td>
+
+
+<td id="form">
+<ul><input type="checkbox" name="product">Shape</ul>
+<ul><input type="checkbox" name="product">Size</ul>
+<ul><input type="checkbox" name="product">Smell</ul>
+<ul><input type="checkbox" name="product">Texture</ul>
+</td>
+</tr>
+
+<tr id="form"> 
+<td><img src="soap-1.jpg"></td>
+<td>
+<ul><input type="radio" name="product">Ivory</ul>
+<ul><input type="radio" name="product">Sandel Wood (shown) </ul>
+<ul><input type="radio" name="product">Red</ul>
+</td>
+<td>
+At $8.00/unit
+<select name="Units">
+<option value ="5">Definitely Buy</option>
+<option value ="4">Likely Buy-</option>
+<option value ="3">Undecided</option>
+<option value ="2">Unlikely Buy</option>
+<option value ="1">Not Buy</option>
+</select>
+</td>
+        
+<td id="form">
+<ul><input type="checkbox" name="product">Shape</ul>
+<ul><input type="checkbox" name="product">Size</ul>
+<ul><input type="checkbox" name="product">Smell</ul>
+<ul><input type="checkbox" name="product">Texture</ul>
+</td>
+</tr>
+<tr>
+<td colspan="4" id="tell">Tell us about yourself....</td>
+</tr>
+
+<tr>
+<td colspan="1">
+Gender:
+<select name="Gender">
+<option value ="0">Male</option>
+<option value ="1">Female</option>
+</select>
+</td>
+<td colspan="3">
+Age:(under 25 enter 1,25-40 enter, else enter 3)
+<textarea class="comment" maxlength="3"
+color="yellow" rows="2" cols="5"></textarea>
+</td>
+</tr>
+
+<tr><td colspan="2">Your comments are welcome:
+<br><textarea class="comment" color="yellow" rows="8" cols="60"></textarea></td>
+<td colspan="2"><button> Done </button>
+<button id="red"> Oops </button></td></tr>
+</table>
+</form>
+<footer></footer>
+
 </body>
 </html>
