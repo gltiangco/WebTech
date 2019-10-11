@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New York Times Navigation bar</title>
+    <script src="https://kit.fontawesome.com/c4b88ea196.js" crossorigin="anonymous"></script>
+<style>
+body{
+width: 100%;
+}
+.center{
+margin-left: auto;
+margin-right: auto;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.subheader{
+width: 93%; 
+margin-top: -25px;
+}
+#nytimes{
+display: flex;
+height: 80px; 
+}
+.topleft{
+width: 50%; 
+float: left;
+}
+.head{
+width: 20%; 
+margin-left: auto; 
+margin-right: auto;
+margin-top: -30px;
+}
+.w93{
+width: 93%;
+margin-left: auto;
+margin-right: auto;
+}
+.white{
+background-color:white;
+border: none;
+color: black;
+padding: 10px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+margin-right: auto;
+margin-left: auto;
+font-size: 12px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#ENGLISH{
+font-weight: bold;
+background-color:white;
+border: none;
+color: black;
+padding: 10px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 12px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.white:hover{
+background-color: rgb(247,247,247);
+color: black;
+}
+.button{
+background-color: black;
+border: none;
+color: white;
+padding: 10px 12px;
+text-align: center;
+display: inline-block;
+border-radius: 4px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight:bold;
+margin-top: -35px;
+margin-right: 80px;
+float:right;
+}
+.blue:hover{
+background-color: rgb(31, 52, 80);
+color: white;
+}
+.date{
+position: relative;
+top: 110px;
+right: 650px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#contents{
+margin-left: 2px;
+width: 90%;
+}
+.icons{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: white;
+}
+li {
+float: left;
+}
+li a {
+display: block;
+color: black;
+text-align: center;
+padding: 0px 14px;
+text-decoration: none;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 14px;
+}
+li a:hover {
+background-color: rgb(247,247,247);
+padding: 3px;
+}
+.flex{
+display: flex; 
+flex-direction: row;
+}
+.w50{
+width: 50%;
+}
+.w50e{
+width: 50%;
+text-align: end;
+}
+.w90{
+width: 90%;
+}
+.navleft{
+margin-left: 10px;
+margin-top: 18px;
+width: 3%;
+}
+
+</style>
+</head>
+<body>
+<div class="navleft">
+<i class="fas fa-search"></i>
+<i class="fas fa-bars"></i>
+</div>
+<div class="head">
+<button id="ENGLISH">ENGLISH</button>
+<button class="white">ESPAÑOL</button>
+<button class="white">中文</button>
+</div>
+<button class="button">LOGIN</button>
+<hr>
+<div>
+<img id="nytimes" class="center" src="NYT.jpg">
+</div> 
+<div class="subheader center">
+<div class ="flex">
+<div class ="w50">
+Thursday, October 10, 2019
+</div>
+<div class ="w50e">
+Today's Paper
+</div>
+</div> 
+<hr id="hr">
+</div>
+<div class="contents center w90">
+<ul class="icons">
+<li><a href="">World</a></li>
+<li><a href="">U.S.</a></li>
+<li><a href="">Politics</a></li>
+<li><a href="">N.Y.</a></li>
+<li><a href="">Business</a></li>
+<li><a href="">Opinion</a></li>
+<li><a href="">Tech</a></li>
+<li><a href="">Science</a></li>
+<li><a href="">Health</a></li>
+<li><a href="">Sports</a></li>
+<li><a href="">Arts</a></li>
+<li><a href="">Books</a></li>
+<li><a href="">Style</a></li>
+<li><a href="">Food</a></li>
+<li><a href="">Travel</a></li>
+<li><a href="">Magazine</a></li>
+<li><a href="">T Magazine</a></li>
+<li><a href="">Real Estate</a></li>
+<li><a href="">Video</a></li>
+</ul>
+</div>
+<div class="w93">
+    <hr>
+</div>
+
+</body>
