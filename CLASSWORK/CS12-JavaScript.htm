@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Script</title>
+    <script type="text/javascript">
+    function calculate(){
+        let x = document.getElementById ("varX").innerHTML;
+        // alert (x) ;   
+        let y = document.getElementById("varY").innerHTML;
+        console.log(x,y);
+
+        x = parseFloat(x);
+        y=parseFloat(y);
+
+        let result = y%x;
+        console.log(result,y);
+
+
+       let r = document.getElementById("result");
+        r.innerHTML="<u>" + result + "</u>";
+        r.style.backgroundColor ="lightblue";
+    }    
+    
+    
+    
+    </script>
+</head>
+<body>
+<p>
+    x = <span id= "varX">2</span>
+</p>
+    y = <span id= "varY">5</span>
+</p>
+<p>
+  The result of calculation is <span id="result">?</span>
+</p>
+<p>
+ <button onclick = "calculate()">Click me</button>   
+</p>
+</body>
+</html>
