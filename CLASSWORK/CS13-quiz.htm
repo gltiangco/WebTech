@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>JavaScript Quiz One</title>
+  <style type="text/css">
+    body {
+      margin: 10px 150px;
+    }
+    div {
+      margin-top: 20px;
+    }
+  </style>
+  <script type="text/javascript">
+    function click1() {
+    let i = document.getElementById("click");
+    i.style.textAlign = "center";
+
+    let g = document.getElementById("click");
+
+    let j = document.getElementById("hide");
+    j.style.Visibility = "hidden";
+
+    }
+    function click3() {
+    let b = document.getElementById("click2");
+    b.style.textIndent = "50px";
+
+    }
+
+    
+</script>
+</head>
+<body>
+  <h1 id = "click" onclick="click1()">JavaScript Quiz 1</h1>
+  <p id ="click2" onclick="click3()">Modify this page so that clicking anywhere in this paragraph indents its first line by 50px. Clicking on the button
+    should center the heading, change the image from jaylenbrown1.png to jaylenbrown2.jpg, and hide the paragraph below
+    button .</p>
+  <button id="jaylen1" onclick="click1()">I am rich!</button>
+  <p id = "hide">
+    I need a big contract!
+  </p>
+  <div>
+    <img alt="jaylen brown" height="100" src="images/jaylenbrown1.png"/>
+  </div>
+</body>
+</html>
