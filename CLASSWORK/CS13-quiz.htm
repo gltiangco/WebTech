@@ -14,36 +14,36 @@
     }
   </style>
   <script type="text/javascript">
-    function click1() {
+    function button() {
     let i = document.getElementById("click");
     i.style.textAlign = "center";
 
-    let g = document.getElementById("click");
+    let g = document.getElementById("jaylenjpg");
+    g.src = "images/jaylenbrown2.jpg";
 
     let j = document.getElementById("hide");
-    j.style.Visibility = "hidden";
-
+    j.style.display = "none";
+    
     }
-    function click3() {
+    function indent() {
     let b = document.getElementById("click2");
     b.style.textIndent = "50px";
 
     }
 
-    
 </script>
 </head>
 <body>
-  <h1 id = "click" onclick="click1()">JavaScript Quiz 1</h1>
-  <p id ="click2" onclick="click3()">Modify this page so that clicking anywhere in this paragraph indents its first line by 50px. Clicking on the button
+  <h1 id = "click" onclick="center()">JavaScript Quiz 1</h1>
+  <p id ="click2" onclick="indent()">Modify this page so that clicking anywhere in this paragraph indents its first line by 50px. Clicking on the button
     should center the heading, change the image from jaylenbrown1.png to jaylenbrown2.jpg, and hide the paragraph below
     button .</p>
-  <button id="jaylen1" onclick="click1()">I am rich!</button>
+  <button id="jaylen1" onclick="button()">I am rich!</button>
   <p id = "hide">
     I need a big contract!
   </p>
   <div>
-    <img alt="jaylen brown" height="100" src="images/jaylenbrown1.png"/>
+    <img alt="jaylen brown" id="jaylenjpg" height="100" src="images/jaylenbrown1.png"/>
   </div>
 </body>
 </html>

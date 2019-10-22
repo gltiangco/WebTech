@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conditional Statements Ddmo</title>
+
+    <script type="text/javascript">
+    function ask(){
+        // let message = prompt("What day of the week is it today?");
+        // alert(message);
+        // console.log(message);
+
+        // let userInput = document.getElementById("input")
+        // userInput.innerHTML = "<i>" + message + "</i>";
+
+        // let result = document.getElementById("result");
+        // let name = prompt ("What is your name?");
+        // userInput.innerHTML+= ", <i>" + name + "</i>";
+
+        // if (name.toLowerCase() = "zoe" && message.toLowerCase() == "tuesday") {
+        //     result.innerHTML = "Correct!"
+        // }
+
+        // else{
+        //     result.innerHTML ="wrong!"
+        // }
+
+        let gender = prompt("What is your gender?");
+        let userInput= document.getElementById("input");
+        userInput.innerHTML = "<i>" + gender + "</i>";
+
+        let result = document.getElementById("result");
+        if (gender.toLowerCase() == "male" || gender.toLowerCase()=="man" ){
+                result.innerHTML="Hello, sir!";
+                document.getElementById("img-result").src="images/man.png";
+        }
+    
+        else if(gender.toLowerCase() == "female" || gender.toLowerCase()=="woman" ){
+                result.innerHTML="Hello, miss!";
+                document.getElementById("img-result").src="images/tiger1.jpg";
+        }
+        else{
+            result.innerHTML = "Hello, robot!";
+            document.getElementById("img-result").src = "images/beaver.jpg";
+        } 
+
+    }
+
+
+    </script>
+</head>
+<body>
+    <h1>Conditional Statements Demo</h1>
+    <button onclick="ask()">Click me!</button>
+    <p>You just entered: <span id="input" ></span></p>
+    <p>Result: <span id="result" ></span></p>
+    
+    
+</body>
+</html>
