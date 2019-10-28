@@ -1,0 +1,94 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title> CS14-InClass Calculator</title>
+    <style type="text/css">
+    #clr {
+        width: 50px;
+        height: 30px;
+    }
+
+    form {
+        background-color: silver;
+        margin: 30px 200px;
+        padding: 40px 40px 40px 200px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+    </style>
+    <script type="text/javascript">
+
+        function sub() {
+            let myForm = document.getElementById("my-form")
+
+            let x = myForm.Num1.value;
+            let y = myForm.Num2.value;
+            let result = parseFloat(x) - parseFloat(y);
+
+            myForm.result.value = result;
+        }
+
+        function add() {
+            let myForm = document.getElementById("my-form")
+
+            let x = myForm.Num1.value;
+            let y = myForm.Num2.value;
+            let result = parseFloat(x) + parseFloat(y);
+
+            myForm.result.value = result;
+        }
+
+        function divi() {
+            let myForm = document.getElementById("my-form")
+
+            let x = myForm.Num1.value;
+            let y = myForm.Num2.value;
+            let result = parseFloat(x) / parseFloat(y);
+
+            myForm.result.value = result;
+        }
+        function multi() {
+            let myForm = document.getElementById("my-form")
+
+            let x = myForm.Num1.value;
+            let y = myForm.Num2.value;
+            let result = parseFloat(x) * parseFloat(y);
+
+            myForm.result.value = result;
+
+        }
+
+    
+
+
+    </script>
+</head>
+
+<body>
+    <h1>The making of a small calculator</h1>
+    <form id="my-form" action="">
+        <p>
+            <label>Your Result:
+                <input id="result" name="result" size="10" type="text" readonly />
+            </label>
+        </p>
+        <p>
+            <label>Number 1:</label>
+            <input id="Num1" name="Num1" size="5" type="text" />
+            <label>Number 2:</label>
+            <input id="Num2" name="Num2" size="5" type="text" />
+
+            <p>
+                <input type="button" onclick="sub()" value="SUB" />
+                <input type="button" onclick="add()" value="ADD" />
+                <input type="button" onclick="divi()" value="DIV" />
+                <input type="button" onclick="multi()" value="MULT" />
+                <input id="clr" name="reset" type="reset" value="Clear" />
+            </p>
+    </form>
+</body>
+
+</html>

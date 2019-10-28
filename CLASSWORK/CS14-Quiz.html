@@ -1,62 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="ie=edge" http-equiv="X-UA-Compatible" />
   <title>JavaScript Quiz 2</title>
   <style type="text/css">
-    body {
-      margin: 10px 150px;
+  body {
+            margin: 10px 150px;
+        }
+
+        div {
+            margin-top: 20px;
+        }
+
+        img {
+            border: 1px green solid;
+        }
+    </style>
+    <script type="text/javascript">
+
+    function changephoto(imageID) {
+
+    let i = document.getElementById(imageID);
+    let h = document.getElementById("g");
+
+    if (imageID == "jaylen1") {
+    h.innerHTML = "Jaylen Brown is Serious";
+
+    let jaylen2 = document.getElementById("jaylen2");
+    jaylen2.style.display = "none";
     }
 
-    div {
-      margin-top: 20px;
+    else if (imageID == "jaylen2") {
+    h.innerHTML = "Jaylen Brown is Smiling";
+
+    let jaylen1 = document.getElementById("jaylen1");
+    jaylen1.style.display = "none";
     }
 
-    img {
-      border: 1px green solid;
-    }
-  </style>
-  <script type="text/javascript">
-  function serious() {
-    let i = document.getElementById("jaylen1");
-    i.src = "images/jaylenbrown2.jpg";
-
-    let j = document.getElementById("jaylen2");
-    j.style.display = "none";
-    }  
-
-    function smiling(){
-    let a = document.getElementById("header");
-        a.innerHTML ="Jaylen Brown is Smiling"
-    let b = document.getElementById("jaylen1");
-        b.style.display = "none";
+    else if (imageID == "clover") {
+    h.innerHTML = "Let's Go, Celtics!";
+    jaylen1.display = inline;
+    aylen2.display = inline;
     }
 
-    function clover(){
-    let g = document.getElementById("header");
-        g.innerHTML ="Let's Go, Celtics!"
-    let d = document.getElementById("jaylen1");
-        d.src = "images/jaylenbrown1.png";
-        d.style.display = "inline";
-    let m = document.getElementById("jaylen2");
-        m.src = "images/jaylenbrown2.jpg";
-        m.style.display = "inline";
 
-    }
+        }
+
+
     </script>
 </head>
+
 <body>
-  <h1 id="header">JavaScript Quiz 2</h1>
-  <p>Please create <strong>one</strong> function to do the following: (a) when user clicks on first picture, h1 must be
-    changed to "Jaylen Brown is Serious", the second picture must disappear; (b) when user clicks on the second picture,
-    h1 must be changed to "Jaylen Brown is Smiling", the first picture must disappear; (c) when user clicks on the third
-    picture, h1 must be changed to "Let's Go, Celtics!", the first two pictures must re-appear.
-  <div>
-    <img alt="jaylen brown 1" height="100" id="jaylen1" onclick="serious()" src="images/jaylenbrown1.png"/>
-    <img alt="jaylen brown 2" height="100" id="jaylen2" onclick ="smiling()"src="images/jaylenbrown2.jpg"/>
-    <img alt="clover" height="100" id="clover" onclick="clover()" src="images/clover.jpg"/>
-  </div>
+    <h1 id="g">JavaScript Quiz 2</h1>
+    <p>Please create <strong>one</strong> function to do the following: (a) when user clicks on first picture, h1 must
+        be
+        changed to "Jaylen Brown is Serious", the second picture must disappear; (b) when user clicks on the second
+        picture,
+        h1 must be changed to "Jaylen Brown is Smiling", the first picture must disappear; (c) when user clicks on the
+        third
+        picture, h1 must be changed to "Let's Go, Celtics!", the first two pictures must re-appear.
+        <div>
+            <img onclick="changephoto(this.id)" id="jaylen1" alt="jaylen brown 1" height="100" id="jaylen1"
+                src="images/jaylenbrown1.png" />
+            <img onclick="changephoto(this.id)" id="jaylen2" alt="jaylen brown 2" height="100" id="jaylen2"
+                src="images/jaylenbrown2.jpg" />
+            <img onclick="changephoto(this.id)" id="clover" alt="clover" height="100" id="clover"
+                src="images/clover.jpg" />
+        </div>
 </body>
+
 </html>

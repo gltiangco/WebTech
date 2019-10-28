@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript for form </title>
+</head>
+<script>
+    function f(){
+    let myForm = document.getElementById("my-form")
+    console.log(myForm.firstName.value);
+    if (myForm.firstName.value == "Owen" && myForm.pw.value =="123")
+    }
+    else(
+        myForm.result.value = "Wrong"
+    )
+
+
+</script>
+<body>
+<form action="" id="my-form">
+<p>Name: <input type="text" name ="firstName"/></p>
+<p>Password: <input type="password" name ="pw"/></p>
+<p>Result: <input type="text" name ="result" readonly/></p>
+<p>
+    <input type="button" value="click" onclick="f()"/>
+</p>
+
+</form>
+</body>
+</html>
