@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>CS15-Processing Form Inputs</title>
+    <style type="text/css">
+      form {
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 30px;
+        font-family: Arial;
+        font-weight: bold;
+        background-color: Silver;
+      }
+
+      h1 {
+        text-align: center;
+        font-family: Arial;
+      }
+    </style>
+    <script type="text/javascript">
+    function display(){
+        let myForm = document.getElementById("form1");
+        let name = myForm.name.value;
+        // console.log(name);
+
+        let age = myForm.age.value;
+        let gender = myForm.gender.value;
+
+        if (name =="" || age == ""){
+            alert("Please finish the form");
+        }
+        else if (isNaN(age)){
+            alert("Please enter a valid age");
+        }
+
+        else{
+            myForm.result.value = 
+            "Name: " + name +  "n\Age: " + age +
+            "\nGender: " + age; 
+        }
+
+        return false;
+    }
+    
+    
+    </script>
+  </head>
+  <body>
+    <h1>Processing form inputs</h1>
+    <form action="" method="post" id="form1">
+      <p>
+        <label> Enter your name: </label>
+        <input name="name" size="40" type="text" />
+        <label>
+          Enter your age :
+        </label>
+        <input name="age" size="4" type="text" />
+      </p>
+      <p>
+        <label>
+          Select your gender:
+        </label>
+        <select name="gender">
+          <option value="Female"> Female</option>
+          <option value="Male"> Male</option>
+        </select>
+      </p>
+      <p>
+        <label>Your selections will appear here:</label>
+        <textarea cols="40" name="result" rows="3"></textarea>
+      </p>
+      <p>
+        <input name="submit" 
+        type="submit" 
+        value="Show" 
+        onclick="return display()" />
+        <input name="reset" type="reset" value="Clear" />
+      </p>
+    </form>
+  </body>
+</html>
