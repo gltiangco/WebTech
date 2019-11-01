@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>CS16-InClass1</title>
+    <style type="text/css">
+        form {
+            background-color: Silver;
+            font-family: Arial;
+            padding: 30px 50px;
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+
+        h2 {
+            text-align: center;
+            color: Black;
+        }
+    </style>
+    <script>
+        function choose() {
+            let myForm = document.getElementById("form1");
+            let userChoice = "Nothing is checked yet!";
+            let colorRadioArray = myForm.colors;
+            console.log(colorRadioArray.length);q
+            for (let i = 0; i < colorRadioArray.length; i = i + 1) {
+                console.log("Iteration" + i + ":");
+                console.log("Color" + colorRadioArray[i].value);
+                console.log("Is checked: " + colorRadioArray[i].checked);
+                if (colorRadioArray[i].checked) {
+                    userChoice = colorRadioArray[i].value;
+                    console.log(colorRadioArray[i].value + " is selected");
+                }
+                else {
+                    console.log(colorRadioArray[i].value + "is not selected");
+                }
+            }
+            let magazines = "";
+           for (let j = 0; j < myForm.mags.length; j++) {
+                 if (myForm.mags[j].checked) {
+            magazines = magazines + myForm.mags[j].value + "\n";
+                }
+            }
+            document.getElementById("form1").style.backgroundColor = userChoice;
+            myForm.result.value = magazines;
+
+            return false;
+        } 
+    </script>
+</head>
+
+<body>
+    <form action="" method="post" id="form1">
+        <h2>Processing Radio Button and Check Box</h2>
+        <p>
+            Please select a background color for the form:
+        </p>
+        <p>
+            <label>Green:<input name="colors" type="radio" value="green" /></label>
+            <label>Yellow:<input name="colors" type="radio" value="yellow" /></label>
+            <label>Lime:<input name="colors" type="radio" value="lime" /></label>
+            <label>Aqua:<input name="colors" type="radio" value="aqua" /></label>
+        </p>
+        <p>Please select your favorite magazines: <br />
+            <label><input name="mags" type="checkbox" value="Sports Illustrated" />Sports Illustrated</label><br />
+            <label><input name="mags" type="checkbox" value="Wired" />Wired</label><br />
+            <label><input name="mags" type="checkbox" value="National Geographic" />National Geographic</label><br />
+            <label><input name="mags" type="checkbox" value="The New Yorker" />The New Yorker</label><br />
+            <label><input name="mags" type="checkbox" value="Time" />Time</label>
+        </p>
+        <p>
+            <label>Your selections:<br>
+                <textarea cols="40" name="result" rows="4"></textarea>
+            </label>
+        </p>
+        <p>
+            <input name="submit" type="submit" value="Go!" onclick=" return choose()" />
+            <input name="Reset" type="reset" value="Clear!" />
+        </p>
+    </form>
+    <h3><a href="low.htm" target="_blank">Gabbi's List of Work</a></h3>
+
+</body>
+
+</html>

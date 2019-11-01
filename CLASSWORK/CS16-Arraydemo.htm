@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Demo</title>
+    <script type="text/javascript">
+        function choose(){
+            let myForm = document.getElementById("form1");
+            let userChoice = "Nothing is checked yet!";
+            // // console.log(userChoice);
+            // let a = myForm.colors;
+            // // console.log(a);
+            // console.log(a[1]);
+
+            // if (a[0].checked){
+            //     userChoice = a[0].value;
+            //     console.log(userChoice);}
+            // else if(a[1].checked){
+            //     userChoice = a[1].value;}
+            // else if(a[2].checked){
+            //     userChoice = a[2].value;}
+            // else if(a[3].checked){
+            //     userChoice = a[3].value;
+            // }
+            // else if(a[4].checked){
+                // userChoice = a[4].value;
+
+            let colorRadioArray= myForm.colors;
+            console.log(colorRadioArray.length);
+            
+            for (let i = 0;i<colorRadioArray.length; i=i+1){
+
+            console.log("Iteration" + i + ":");
+            console.log("Color"+colorRadioArray[i].value);
+            console.log("Is checked: " + colorRadioArray[i].checked);
+
+                if (colorRadioArray[i].checked){
+                    userChoice = colorRadioArray[i].value;
+                    console.log(colorRadioArray[i].value + " is selected");
+                } 
+                else{
+                    console.log(colorRadioArray[i].value+ "is not selected");
+                }
+            }
+
+            document.getElementById("heading1").style.color=userChoice;
+            
+            let lines = "";
+            const PI = 3.14;
+        
+            const roster = ['Gabbi', 'Maria', 'Pepe','Mischka','Danni','Javier','Jaime','Stella','Emma']
+            for (let i=0; i<roster.length; i++){
+                lines += "<li>" + roster[i] + ":" + (60+Math.floor(Math.random()*40))+"</li>";
+            }
+            return false;
+        }
+    
+    </script>
+</head>
+<body>
+    <h1 id="heading1">Array Demo</h1>
+    <form action="" id="form1">
+        <label>
+            Red: <input type="radio" name="colors" value="red">
+        </label>
+        <label>
+            Blue: <input type="radio" name="colors" value="blue">
+        </label>
+        <label>
+            Green: <input type="radio" name="colors" value="green">
+        </label>
+        <label>
+            Yellow: <input type="radio" name="colors" value="yellow">
+        </label>
+        <label>
+            Aqua: <input type="radio" name="colors" value="aqua">
+        </label>
+        <p>
+            <button onclick="return choose()">Click</button>
+            <input type="reset" value="Clear">
+
+        </p>
+        <p>
+            <ul id="names"></ul>
+        </p>
+
+    </form>
+    <h3><a href="low.htm" target="_blank">Gabbi's List of Work</a></h3>
+
+</body>
+</html>
