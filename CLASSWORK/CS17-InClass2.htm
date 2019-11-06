@@ -25,14 +25,40 @@
         background-color: Yellow;
       }
     </style>
-
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+    const lyrics = [
+        "Who knows how long I've loved you",
+        "You know I love you still",
+        "Will I wait a lonely lifetime",
+        "If you want me to, I will"
+        ];
+        let p = 320;
+        let i = 0;
+        function doScroll(){
+            let g = document.getElementById ("msg");
+            g.innerHTML = lyrics [i];
+            g.style.left = p + "px"
+            if (p > 700){
+                p = 320; 
+                i++;
+            if (i == lyrics.length){
+                i = 0;
+            }
+            }
+            else {
+            p = p +1;
+            }
+        setTimeout("doScroll()", 8);
+        }
+    </script>
   </head>
 
-  <body>
+  <body onload="doScroll()">
     <h1>Moving Text</h1>
     <div>
       <h2 id="msg">This text will move</h2>
     </div>
+    <h3><a href="low.htm" target="_blank">Gabbi's List of Work</a></h3>
+
   </body>
 </html>
