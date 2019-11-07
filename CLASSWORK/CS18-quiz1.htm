@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>CS18 Quiz-1: Yet Another Simple Calculator</title>
+  <style type="text/css">
+    form {
+      font-weight: bold;
+      padding: 20px;
+      width: 70%;
+      margin-right: auto;
+      margin-left: auto;
+      background-color: Silver;
+    }
+
+    h1 {
+      font-weight: bold;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    #question {
+      font-size: large;
+      width: 70%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  </style>
+  <script>
+      function calc() {
+        let myForm = document.getElementById("result");
+        let x = myForm.from.value;
+        let y = myForm.to.value;
+        for (let g=0; g<6; g++){
+            sum*= (0+1) * (0+2) * (0+3) * (0+4) * (0+5)*6;
+        }
+        console.log("");
+    
+        myForm.result.value = result;
+       return false;
+    }
+          
+
+  </script>
+</head>
+<body>
+  <h1> Yet Another Simple Calculator</h1>
+  <p id="question"> Please use <b>for</b> loop to calculate <strong>product</strong> of all the integers between these
+    two numbers (inclusive). For example, if the two inputs are 2 and 5, the result should be 120. 
+    You don't have to validate inputs; in other words, you can assume both inputs are positive
+    integers (you still need to convert) and the first number is smaller than the second.</p>
+  <form action="" method="post" id="result">
+    <p id="p1">
+      <label>From:
+        <input name="from" size="10" type="text"/>
+      </label>
+      <label>To:
+        <input name="to" size="10" type="text"/>
+      </label>
+    </p>
+    <p>
+      <input name="calculate" type="button" value="Calculate" onclick=" return calc()"/>
+      <input name="reset" type="reset" value="Clear"/>
+    </p>
+    <p>The result is <span id="result">?</span>.</p>
+  </form>
+</body>
+</html>
