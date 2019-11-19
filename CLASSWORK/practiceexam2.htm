@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <title>Q2 - Web Tech - Fall 2018</title>
+  <style type="text/css">
+    table {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    img {
+      width: 70%;
+    }
+    h1 {
+      font-family: Arial;
+      font-weight: bold;
+      text-align: center;
+    }
+    p {
+      font-family: arial;
+      font-size: 16pt;
+      color: navy;
+      padding: 10px 100px 10px 100px;
+      text-align: left;
+    }
+  </style>
+  <script type="text/javascript">
+
+function emoji(imageID) {
+
+let i = document.getElementById(imageID);
+let h = document.getElementById("rocks");
+let g = document.getElementById("sucks");
+
+if (imageID == "smiley") {
+h.style.backgroundColor = "yellow";
+h.style.fontSize = "2em";
+h.style.fontFamily = "Lucinda Handwriting";
+h.style.color = "red";
+g.style.display = "none";
+
+}
+
+else if (imageID == "frown") {
+  let g = document.getElementById("sucks");
+  let h = document.getElementById("rocks");
+
+g.style.backgroundColor = "blue";
+g.style.fontSize = "2em";
+g.style.fontFamily = "Arial";
+g.style.fontStyle = "bold";
+g.style.color = "green";
+h.style.display = "none";
+
+  }
+}
+  </script>
+</head>
+<body>
+  <h1>Web Tech Exam - Q2 (20 points)</h1>
+  <p>
+    There are two images shown below along with two text strings. Create the functionality whereby if you click on
+    the Smiley.jpg image, the text string "Web Tech Rocks" is shown in red font, size 2em, using Lucida Handwriting
+    with a yellow background. If you click on frown.jpg image, the string "Web Tech Sucks" is shown in green font,
+    bold, size 2em, with a blue background and using Arial font. When one text string is shown, the other should not
+    be displayed. For full credit, write this as a single function. For 15 points, write it using as many functions
+    as necessary.
+  </p>
+  <table>
+    <tr>
+      <td><img alt="Smiling Face" onclick="emoji(this.id)" id="smiley" src="images/smiley.jpg" title="Smile"></td>
+      <td id="rocks">Web Tech Rocks!</td>
+    </tr>
+    <tr>
+      <td><img alt="Frown Face" onclick="emoji(this.id)" id="frown" src="images/frown.jpg" title="Sad"></td>
+      <td id="sucks">Web Tech Sucks!</td>
+    </tr>
+  </table>
+</body>
+</html>
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

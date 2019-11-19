@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Web Tech Exam - Q3</title>
+    <style type="text/css">
+        h1,
+        h2 {
+            text-align: center;
+            font-family: Arial;
+            color: Navy;
+        }
+
+        img {
+            border: 3px solid black;
+        }
+
+        p {
+            text-align: center;
+            font-size: larger;
+        }
+
+        p.q {
+            margin-right: 100px;
+            margin-left: 100px;
+            text-align: justify;
+            font-family: Arial;
+            color: Navy;
+            font-size: large;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+        }
+
+        input#rst {
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+    <script type="text/javascript">
+        function calc() {
+            let c = myForm.km.value;
+            let f = myForm.m.value;
+
+            if (c == "" && f == "") {
+                alert("Please enter a valid number");
+            }
+            if (c.length > 0) {
+                myForm.km.value = (c * (3 / 2));
+            }
+            if (f.length > 0) {
+                myForm.m.value = (f * (2 / 3));
+            }
+            if (isNaN(c)) {
+                alert("Please enter a valid number");
+            }
+            else if (isNaN(f)) {
+                alert("Please enter a valid number");
+            }
+        
+        return false;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Web Tech Exam - Question 3</h1>
+    <hr />
+    <p class="q">Please create the following functionality using the form given below. The user will enter ONE of two
+        numerical values
+        into the text box in the form given. The user will then click the "Convert" button. Depending on which value
+        is entered, please convert it and show the corresponding converted value in the other text box. For example,
+        if Kilometers is entered and Miles is not, then you should convert KM to Miles. If Miles is entered and
+        Kilometers
+        is not, then, convert Miles to KM. The conversion rule, simplified, is: multiply by (2/3) to convert KM to Miles
+        and by (3/2) to convert Miles to KM. Remember to use ParseFloat. Also, the function may require a "return" to
+        ensure that the form does not get reset. This part is worth 15 points. For the additional 5 points, please alert
+        user if both fields are empty when the "Convert" button is clicked and alert the user if a non-numerical value
+        is entered.
+    </p>
+    <hr />
+    <h2> Convert and Smile </h2>
+    <form method="post">
+        <p>
+            Kilometers: <input name="km" id="kilo" size="10" type="text" />
+            Miles: <input name="m" id="miles" size="10" type="text" />
+        </p>
+        <p>
+            <button onclick="return calc()">Convert</button>
+        </p>
+        <hr />
+        <p>
+            <input name="reset" type="reset" value="Clear" />
+        </p>
+    </form>
+</body>
+<!-- Half way there!-->
+
+</html>
