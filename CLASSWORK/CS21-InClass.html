@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+  <title>CS21 - JQuery functions</title>
+  <script
+    crossorigin="anonymous"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <style type="text/css">
+    .red {
+      color: Red;
+      font-family: Cursive,serif;
+      font-weight: bold;
+    }
+    .blue {
+      color: Navy;
+      font-family: Lucida Handwriting,serif;
+      font-style: italic;
+      font-weight: normal;
+    }
+    table,
+    td {
+      border: 1px solid black;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    div#three {
+      position: absolute;
+      left: 50px;
+      top: 400px;
+    }
+  </style>
+  <script type="text/javascript">
+    $(function () {
+        $("#odd").click(function(){
+        $("tr:odd").hide();
+        $("tr:even").show();
+        $("#three").animate({top:"50px"}, 3000)
+    
+    
+    });
+     
+        
+        $("#even").click(function(){
+        $("tr:even").hide();
+        $("tr:odd").show();
+        $("#three").animate({top:"400px"}, 3000)
+    });
+     
+
+        $("p").click(function(){
+            $("h1","p","tr").addClass("blue");  
+            $("h2").addClass("red");    
+    });
+
+        $("h1").click(function(){
+            $("h1","p","tr").removeClass("blue");  
+            $("h2").removeClass("red");   
+          $("h1,p,tr").addClass("red");
+    });
+        
+
+    });
+  </script>
+</head>
+<body>
+  <!-- Your HTML goes here -->
+  <h1>This is a simple text</h1>
+  <h2>This is another simple text</h2>
+  <p>
+    It's hard to tell what goes through a baby elephant's mind when its mom is
+    trying to put it to sleep. Do you think baby elephants wake up in the
+    middle of the night and cry? Do their moms and dads take turns getting up
+    with them to rock them back to sleep? How do you rock an elephant, anyway?
+    And what about gorillas?
+  </p>
+  <table>
+    <tr>
+      <td>Tom Brady</td>
+      <td>1 Patriot Place</td>
+      <td>Foxborough</td>
+      <td>MA</td>
+      <td>00007</td>
+    </tr>
+    <tr>
+      <td>Rob Gronkowski</td>
+      <td>2 Patriot Place</td>
+      <td>Foxborough</td>
+      <td>MA</td>
+      <td>00007</td>
+    </tr>
+    <tr>
+      <td>Bill Bellichick</td>
+      <td>3 Patriot Place</td>
+      <td>Foxborough</td>
+      <td>MA</td>
+      <td>00007</td>
+    </tr>
+    <tr>
+      <td>Robert Kraft</td>
+      <td>10 Patriot Place</td>
+      <td>Foxborough</td>
+      <td>MA</td>
+      <td>00007</td>
+    </tr>
+  </table>
+  <button id="odd">Show Odd Rows</button>
+  <button id="even">Show Even Rows</button>
+  <div id="three">
+    <h3>This text will move</h3>
+  </div>
+</body>
+</html>
